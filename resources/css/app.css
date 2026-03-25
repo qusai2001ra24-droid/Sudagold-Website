@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --gold: #d4af37;
+    --gold-dark: #b8962e;
+    --gold-light: #e8c547;
+    --black: #0a0a0a;
+    --black-light: #1a1a1a;
+}
+
+@layer base {
+    body {
+        font-family: 'Instrument Sans', sans-serif;
+    }
+    
+    html[lang="ar"] {
+        direction: rtl;
+    }
+    
+    html[lang="ar"] body {
+        font-family: 'Noto Sans Arabic', 'Instrument Sans', sans-serif;
+    }
+}
+
+@layer components {
+    .gold-text {
+        color: var(--gold);
+    }
+    
+    .gold-bg {
+        background-color: var(--gold);
+    }
+    
+    .gold-gradient {
+        background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 50%, #d4af37 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Button Base */
+    .btn-gold {
+        @apply px-6 py-3 bg-[#d4af37] text-black font-medium rounded-lg hover:bg-[#e8c547] transition-all duration-300 relative overflow-hidden;
+    }
+    
+    .btn-gold::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+        border-radius: 50%;
+    }
+    
+    .btn-gold:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .btn-gold span:not(.sparkle) {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .btn-gold .sparkle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .btn-gold:hover .sparkle {
+        animation: sparkle 0.8s ease-out forwards;
+    }
+    
+    .btn-gold:hover .sparkle:nth-child(1) { top: 20%; left: 20%; --tx: -10px; --ty: -10px; }
+    .btn-gold:hover .sparkle:nth-child(2) { top: 10%; left: 50%; --tx: 0px; --ty: -15px; }
+    .btn-gold:hover .sparkle:nth-child(3) { top: 20%; left: 80%; --tx: 10px; --ty: -10px; }
+    .btn-gold:hover .sparkle:nth-child(4) { top: 50%; left: 90%; --tx: 15px; --ty: 0px; }
+    .btn-gold:hover .sparkle:nth-child(5) { top: 80%; left: 80%; --tx: 10px; --ty: 10px; }
+    .btn-gold:hover .sparkle:nth-child(6) { top: 90%; left: 50%; --tx: 0px; --ty: 15px; }
+    .btn-gold:hover .sparkle:nth-child(7) { top: 80%; left: 20%; --tx: -10px; --ty: 10px; }
+    .btn-gold:hover .sparkle:nth-child(8) { top: 50%; left: 10%; --tx: -15px; --ty: 0px; }
+    
+    .btn-outline-gold {
+        @apply px-6 py-3 border border-[#d4af37] text-[#d4af37] font-medium rounded-lg hover:bg-[#d4af37] hover:text-black transition-all duration-300 relative overflow-hidden;
+    }
+    
+    .btn-outline-gold::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, rgba(212,175,55,0.8) 0%, transparent 70%);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+        border-radius: 50%;
+    }
+    
+    .btn-outline-gold:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .btn-outline-gold span:not(.sparkle) {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .btn-outline-gold .sparkle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #d4af37;
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .btn-outline-gold:hover .sparkle {
+        animation: sparkle 0.8s ease-out forwards;
+    }
+    
+    .btn-outline-gold:hover .sparkle:nth-child(1) { top: 20%; left: 20%; --tx: -10px; --ty: -10px; }
+    .btn-outline-gold:hover .sparkle:nth-child(2) { top: 10%; left: 50%; --tx: 0px; --ty: -15px; }
+    .btn-outline-gold:hover .sparkle:nth-child(3) { top: 20%; left: 80%; --tx: 10px; --ty: -10px; }
+    .btn-outline-gold:hover .sparkle:nth-child(4) { top: 50%; left: 90%; --tx: 15px; --ty: 0px; }
+    .btn-outline-gold:hover .sparkle:nth-child(5) { top: 80%; left: 80%; --tx: 10px; --ty: 10px; }
+    .btn-outline-gold:hover .sparkle:nth-child(6) { top: 90%; left: 50%; --tx: 0px; --ty: 15px; }
+    .btn-outline-gold:hover .sparkle:nth-child(7) { top: 80%; left: 20%; --tx: -10px; --ty: 10px; }
+    .btn-outline-gold:hover .sparkle:nth-child(8) { top: 50%; left: 10%; --tx: -15px; --ty: 0px; }
+    
+    @keyframes sparkle {
+        0% {
+            opacity: 1;
+            transform: scale(0) translate(0, 0);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1) translate(var(--tx), var(--ty));
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0.5) translate(calc(var(--tx) * 2), calc(var(--ty) * 2));
+        }
+    }
+    
+    /* Link Hover Effect */
+    .link-luxury {
+        @apply relative inline-block text-gray-300 hover:text-[#d4af37] transition-colors duration-300;
+    }
+    
+    .link-luxury::before,
+    .link-luxury::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: radial-gradient(circle, #d4af37 0%, transparent 70%);
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+    
+    .link-luxury::before {
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+    }
+    
+    .link-luxury::after {
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+    }
+    
+    .link-luxury:hover::before,
+    .link-luxury:hover::after {
+        opacity: 1;
+    }
+    
+    .link-luxury:hover::before {
+        right: -15px;
+    }
+    
+    .link-luxury:hover::after {
+        left: -15px;
+    }
+    
+    /* Card Luxury */
+    .card-luxury {
+        @apply bg-[#1a1a1a] border border-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#d4af37]/50;
+    }
+    
+    .product-card {
+        @apply bg-[#1a1a1a] border border-gray-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-[#d4af37]/50;
+    }
+    
+    .product-card-image {
+        @apply relative aspect-square overflow-hidden bg-gray-900;
+    }
+    
+    .product-card-image img {
+        @apply w-full h-full object-cover transition-transform duration-500;
+    }
+    
+    .product-card:hover .product-card-image img {
+        @apply scale-110;
+    }
+    
+    .input-luxury {
+        @apply w-full px-4 py-3 bg-black border border-gray-800 text-white rounded-lg focus:outline-none focus:border-[#d4af37] transition-colors;
+    }
+    
+    /* Language Switcher Button */
+    .lang-switch {
+        @apply flex items-center gap-2 px-3 py-2 border border-gray-700 rounded-lg text-gray-300 hover:border-[#d4af37] hover:text-[#d4af37] transition-all duration-300;
+    }
+    
+    .lang-switch::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 12px;
+        background: radial-gradient(circle, rgba(212,175,55,0.3) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .lang-switch:hover::before {
+        opacity: 1;
+    }
+}
+
+@layer utilities {
+    .slide-up {
+        animation: slideUp 0.8s ease forwards;
+    }
+    
+    .fade-in {
+        animation: fadeIn 0.8s ease forwards;
+    }
+    
+    .stagger-1 { animation-delay: 0.2s; }
+    .stagger-2 { animation-delay: 0.4s; }
+    .stagger-3 { animation-delay: 0.6s; }
+    .stagger-4 { animation-delay: 0.8s; }
+    
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    /* Gold Bullion Particles */
+    .gold-particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #d4af37;
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 0;
+    }
+    
+    .hover-particle:hover .gold-particle {
+        animation: particleFloat 1s ease-out forwards;
+    }
+    
+    .gold-particle:nth-child(1) { top: 0; left: 50%; animation-delay: 0s; }
+    .gold-particle:nth-child(2) { top: 25%; left: 0; animation-delay: 0.1s; }
+    .gold-particle:nth-child(3) { top: 75%; left: 0; animation-delay: 0.2s; }
+    .gold-particle:nth-child(4) { top: 100%; left: 50%; animation-delay: 0.3s; }
+    .gold-particle:nth-child(5) { top: 75%; right: 0; animation-delay: 0.15s; }
+    .gold-particle:nth-child(6) { top: 25%; right: 0; animation-delay: 0.25s; }
+    
+    @keyframes particleFloat {
+        0% { opacity: 1; transform: translate(0, 0) scale(1); }
+        100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0); }
+    }
+}
