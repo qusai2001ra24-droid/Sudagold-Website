@@ -37,7 +37,7 @@
         <div class="text-center">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/30 rounded-full mb-6">
                 <span class="w-2 h-2 bg-gold rounded-full live-dot"></span>
-                <span class="text-gold text-sm font-medium">تحديث مباشر للأسعار</span>
+                <span class="text-white text-sm font-bold">تحديث مباشر للأسعار</span>
             </div>
             <h1 class="text-4xl md:text-6xl font-serif mb-4">
                 <span class="gold-gradient">تحليلات الذهب</span>
@@ -389,10 +389,10 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-                <p class="text-gold uppercase tracking-wider text-sm mb-4">استثمار</p>
-                <h2 class="text-4xl font-serif mb-6">الذهب كاستثمار آمن</h2>
+                <p class="text-gold uppercase tracking-wider text-sm mb-4">إستثمار</p>
+                <h2 class="text-4xl font-serif mb-6">الذهب كإستثمار آمن</h2>
                 <p class="text-gray-400 leading-relaxed mb-6">
-                    على مر التاريخ، اعتبر الذهب ملاذاً آمناً للمستثمرين. في أوقات الأزمات الاقتصادية وعدم الاستقرار، يميل سعر الذهب للصعود حيث يلجأ المستثمرون إليه لحماية ثرواتهم.
+                    على مر التاريخ، اعتبر الذهب ملاذاً آمناً للمستثمرين. في أوقات الأزمات الإقتصادية وعدم الإستقرار، يميل سعر الذهب للصعود حيث يلجأ المستثمرون إليه لحماية ثرواتهم.
                 </p>
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
@@ -403,7 +403,7 @@
                         </div>
                         <div>
                             <h4 class="text-white font-medium mb-1">حماية من التضخم</h4>
-                            <p class="text-gray-400 text-sm">الذهب يحتفظ بقيمته الحقيقية عند ارتفاع أسعار المستهلك</p>
+                            <p class="text-gray-400 text-sm">الذهب يحتفظ بقيمته الحقيقية عند إرتفاع أسعار المستهلك</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
@@ -414,7 +414,7 @@
                         </div>
                         <div>
                             <h4 class="text-white font-medium mb-1">تنويع المحفظة</h4>
-                            <p class="text-gray-400 text-sm">يقلل من المخاطر الإجمالية عند إضافته لمحافظ الاستثمار</p>
+                            <p class="text-gray-400 text-sm">يقلل من المخاطر الإجمالية عند إضافته لمحافظ الإستثمار</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">

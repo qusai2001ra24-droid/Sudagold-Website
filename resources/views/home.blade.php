@@ -193,10 +193,10 @@
         <div class="absolute top-0 right-0 w-1/2 h-full bg-gold blur-3xl"></div>
     </div>
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <p class="text-gold uppercase tracking-wider text-sm mb-4">إبدأ رحلتك</p>
+        <p class="text-gold uppercase tracking-wider text-bold mb-4">إبدأ رحلتك</p>
         <h2 class="text-4xl md:text-6xl font-serif mb-6">تجربة <span class="gold-gradient">إستثنائية</span></h2>
         <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-            إنضم إلى آلاف الأشخاص الذين اختاروا سوداقولد للاحتفال بأشهر لحظاتهم الأكثر قيمة.
+            إنضم إلى آلاف الأشخاص الذين اختاروا سوداقولد للإحتفال بأشهر لحظاتهم الأكثر قيمة.
         </p>
         <a href="{{ route('catalog') }}" class="btn-gold">إكتشف المجوعات الذهبية</a>
     </div>
@@ -206,7 +206,7 @@
 <section class="py-24 bg-black">
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-xl mx-auto text-center">
-            <p class="text-gold uppercase tracking-wider text-sm mb-4">كن أول من يعلم</p>
+            <p class="text-gold uppercase tracking-wider text-bold mb-4">كن أول من يعلم</p>
             <h2 class="text-3xl md:text-4xl font-serif mb-4">إشترك في النشرة الإخبارية</h2>
             <p class="text-gray-500 mb-8">كن أول من يعلم عن العروض والفعاليات</p>
             <form class="flex flex-col sm:flex-row gap-4">

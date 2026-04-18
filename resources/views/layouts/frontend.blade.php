@@ -258,7 +258,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-                <p>&copy; {{ date('Y') }} سوداقولد. كل الحقوق محفوظة. 2026</p>
+                <p>سوداقولد. كل الحقوق محفوظة. &copy; {{ date('Y') }} </p>
             </div>
         </div>
     </footer>
